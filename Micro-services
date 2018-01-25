@@ -21,7 +21,7 @@ def notifyBuild(String buildStatus, Exception e) {
     details +="<p>Error message ${e.message}, stacktrace: ${e}</p>"
     summary +="\nError message ${e.message}, stacktrace: ${e}"
   }
-
+}
 
 node ('micro') {
    def serverArti = Artifactory.newServer url: 'https://jcenter.bintray.com'
