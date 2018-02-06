@@ -43,7 +43,7 @@ node ('micro') {
 	}
    stage('setup the Environment'){
     
-      sh 'pwd;bin/setup'
+      sh './bin/setup'
        }
 	
 	stage ('Reports') {
