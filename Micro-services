@@ -43,9 +43,9 @@ node ('micro') {
 	}
    stage('setup the Environment'){
    
- //  withEnv(['path=/usr/local/bin:$path']) {
+  withEnv(['path=/usr/local/bin:/bin:$path']) {
     sh 'bin/setup'
-// }
+}
        }
 	
 	stage ('Reports') {
