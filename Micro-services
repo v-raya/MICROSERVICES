@@ -33,7 +33,6 @@ node ('micro') {
 
    def errorcode = null;
    def buildInfo = '';
-   sh 'ln -s /opt/docker-compose.yml xyz'
 
  try {
 
