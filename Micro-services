@@ -44,8 +44,10 @@ node ('micro') {
    stage('setup the Environment'){
    
   withEnv(['path=/usr/local/bin:/bin:/usr/bin:$path']) {
-    sh 'docker login --password-stdin=$DOCKER_PASS -u cwdsdevops https://index.docker.io/v1/ '
+  withDockerRegistry([credentialsId: '3ce810c0-b697-4ad1-a1b7-ad656b99686e']) {
     sh 'bin/setup'
+}
+    
 }
        }
 	
