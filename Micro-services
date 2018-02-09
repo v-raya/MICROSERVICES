@@ -44,7 +44,7 @@ node ('micro') {
    stage('setup the Environment'){
    
   withEnv(['path=/usr/local/bin:/bin:/usr/bin:$path']) {
-    sh 'docker login -p $docker_registry_password -u $docker_registry_user $docker_registry_host'
+    sh 'docker login --password-stdin $docker_registry_password -u $docker_registry_user $docker_registry_host'
     sh 'bin/setup'
 }
        }
