@@ -46,7 +46,7 @@ node ('micro') {
   withEnv(['path=/usr/local/bin:/bin:/usr/bin:$path']) {
   withDockerRegistry([credentialsId: '3ce810c0-b697-4ad1-a1b7-ad656b99686e']) {
     sh 'docker-compose -f docker-compose.yml down --remove-orphans'
-    sh 'docker-compose up'
+    sh 'docker-compose up -d'
 }
     
 }
